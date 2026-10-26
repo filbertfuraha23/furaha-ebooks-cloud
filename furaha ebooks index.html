@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="The Instagram Business Starter by Furaha Ebooks - a 25-page guide to starting and running a profitable Instagram business while you keep your job. Built for employed women in Tanzania.">
+<meta property="og:title" content="The Instagram Business Starter - Furaha Ebooks">
+<meta property="og:description" content="Start your Instagram business without quitting your job. 25 pages, 10 chapters, a 30-day launch plan. Instant download.">
+<meta property="og:type" content="website">
+<title>The Instagram Business Starter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap">
+<style>
+/* ============================================================
+   LAYOUT: single scroll of full-bleed bands — deep-green marketing
+   bands (hero, proof, pricing, CTA) alternating with warm-ivory
+   reading bands. Brand bands stay green in both themes; reading
+   bands adapt. Honey-gold is the single accent.
+   ============================================================ */
+:root{
+  /* adaptive reading surfaces */
+  --bg:#f6efe1;            /* page base: warm ivory */
+  --surface:#fffdf7;       /* cards on ivory */
+  --surface-2:#efe5d2;     /* sunken ivory */
+  --fg:#17302b;            /* near-black green ink */
+  --fg-muted:#5b6f68;      /* muted ink */
+  --line:rgba(23,48,43,.12);
+  --line-strong:rgba(23,48,43,.2);
+  /* fixed brand colours (same in both themes) */
+  --green:#0e5a4e;
+  --green-deep:#0a4035;
+  --green-900:#072a23;     /* hero/CTA ground */
+  --green-800:#0a3c32;
+  --on-green:#eef4ea;      /* text on green */
+  --on-green-soft:#a9c6ba; /* muted text on green */
+  --gold:#e3a93a;
+  --gold-soft:#f3cd7e;
+  --gold-deep:#b9821f;
+  --whats:#2bd36b;
+  --ink-on-gold:#3a2a06;
+  color-scheme:light;
+  --shadow-sm:0 1px 2px rgba(7,42,35,.08);
+  --shadow:0 18px 44px -24px rgba(7,42,35,.5);
+  --shadow-lift:0 30px 70px -30px rgba(7,42,35,.6);
+  --maxw:1120px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1a17;
+    --surface:#11241f;
+    --surface-2:#0d1f1b;
+    --fg:#eaf2ec;
+    --fg-muted:#9fb4ac;
+    --line:rgba(234,242,236,.12);
+    --line-strong:rgba(234,242,236,.2);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b1a17;
+  --surface:#11241f;
+  --surface-2:#0d1f1b;
+  --fg:#eaf2ec;
+  --fg-muted:#9fb4ac;
+  --line:rgba(234,242,236,.12);
+  --line-strong:rgba(234,242,236,.2);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:"Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:"Bricolage Grotesque","Figtree",system-ui,sans-serif;font-weight:700;line-height:1.05;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%}
+
+/* ---- shared band layout ---- */
+.band{width:100%;position:relative}
+.wrap{
+  max-width:var(--maxw);margin:0 auto;
+  padding-left:max(20px,env(safe-area-inset-left,0px));
+  padding-right:max(20px,env(safe-area-inset-right,0px));
+}
+.band-pad{padding-block:clamp(56px,8vw,104px)}
+
+.eyebrow{
+  font-family:"Figtree",sans-serif;font-weight:700;font-size:.74rem;
+  letter-spacing:.22em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:.6em;
+}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(227,169,58,.2)}
+
+/* ---- buttons ---- */
+.btn{
+  display:inline-flex;align-items:center;gap:.55em;justify-content:center;
+  font-family:"Figtree",sans-serif;font-weight:700;font-size:1.02rem;
+  padding:.92em 1.5em;border-radius:999px;text-decoration:none;cursor:pointer;
+  border:1.5px solid transparent;transition:transform .15s ease,box-shadow .2s ease,background .2s;
+  line-height:1;
+}
+.btn:active{transform:translateY(1px)}
+.btn-gold{background:var(--gold);color:var(--ink-on-gold);box-shadow:0 10px 26px -10px rgba(227,169,58,.8)}
+.btn-gold:hover{background:var(--gold-soft);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--on-green);border-color:rgba(255,255,255,.3)}
+.btn-ghost:hover{border-color:var(--gold-soft);color:var(--gold-soft)}
+.btn-green{background:var(--green);color:var(--on-green);box-shadow:var(--shadow)}
+.btn-green:hover{background:var(--green-deep);transform:translateY(-2px)}
+.btn-whats{background:var(--whats);color:#062a14;box-shadow:0 10px 26px -12px rgba(43,211,107,.85)}
+.btn-whats:hover{transform:translateY(-2px)}
+.btn-lg{font-size:1.1rem;padding:1.05em 1.8em}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--green-900)}
+header.nav{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:50;
+  background:rgba(7,42,35,.86);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:.7rem;gap:1rem}
+.brand{display:flex;align-items:center;gap:.6rem;color:var(--on-green);text-decoration:none}
+.brand .mark{width:34px;height:34px;flex:none}
+.brand b{font-family:"Bricolage Grotesque";font-weight:800;font-size:1.08rem;letter-spacing:-.01em}
+.brand small{display:block;font-size:.6rem;letter-spacing:.28em;color:var(--gold-soft);text-transform:uppercase;font-weight:700;margin-top:1px}
+.nav-cta{display:flex;align-items:center;gap:.8rem}
+.nav-price{color:var(--on-green-soft);font-size:.85rem;font-weight:600}
+.nav-price b{color:var(--on-green)}
+@media(max-width:620px){.nav-price{display:none}}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{background:radial-gradient(130% 100% at 85% -10%,#0f5347 0%,var(--green-900) 55%,#05211b 100%);color:var(--on-green);overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background-image:
+  radial-gradient(circle at 12% 20%,rgba(227,169,58,.14),transparent 30%),
+  radial-gradient(circle at 90% 80%,rgba(43,211,107,.1),transparent 34%);
+  pointer-events:none}
+.kanga{position:absolute;inset:auto 0 0 0;height:14px;z-index:2;
+  background:
+   repeating-linear-gradient(90deg,var(--gold) 0 18px,transparent 18px 36px) center/36px 100%,
+   linear-gradient(var(--gold-deep),var(--gold-deep));
+  -webkit-mask:repeating-linear-gradient(90deg,#000 0 18px,transparent 18px 36px);
+  opacity:.9}
+.hero .wrap{position:relative;z-index:3;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(28px,4vw,56px);align-items:center;padding-block:clamp(44px,6vw,80px)}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:34px}}
+.hero .eyebrow{color:var(--gold-soft)}
+.hero h1{font-size:clamp(2.3rem,5.4vw,3.9rem);letter-spacing:-.02em;margin:.5rem 0 .2rem}
+.hero h1 .hl{color:var(--gold-soft);position:relative;white-space:nowrap}
+.hero .sub{font-size:clamp(1.05rem,1.6vw,1.25rem);color:var(--on-green-soft);max-width:30ch;margin-top:.9rem}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.7rem}
+.trust{display:flex;flex-wrap:wrap;gap:.5rem .9rem;margin-top:1.7rem}
+.trust .chip{display:inline-flex;align-items:center;gap:.45em;font-size:.82rem;font-weight:600;color:var(--on-green);
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:.45em .8em;border-radius:999px}
+.trust .chip svg{flex:none}
+.stars{color:var(--gold)}
+
+/* phone mockup */
+.hero-visual{position:relative;display:flex;justify-content:center}
+.phone{
+  position:relative;width:min(300px,78vw);aspect-ratio:300/610;
+  background:linear-gradient(170deg,#12332c,#081d18);border-radius:40px;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:var(--shadow-lift),inset 0 1px 0 rgba(255,255,255,.1);
+  padding:12px;animation:float 6s ease-in-out infinite;
+}
+.phone .screen{width:100%;height:100%;border-radius:30px;overflow:hidden;background:var(--surface);position:relative;display:flex;flex-direction:column}
+.ig-top{display:flex;align-items:center;gap:.5rem;padding:12px 12px 8px;border-bottom:1px solid var(--line)}
+.ig-top .av{width:34px;height:34px;border-radius:50%;flex:none;background:
+  conic-gradient(from 30deg,#f2b134,#e0613b,#c23b8e,#7c3aed,#f2b134);padding:2px}
+.ig-top .av span{display:block;width:100%;height:100%;border-radius:50%;background:var(--surface)}
+.ig-top .h{font-size:.72rem;color:var(--fg);line-height:1.2}
+.ig-top .h b{font-size:.8rem;font-weight:700;color:var(--fg)}
+.ig-top .h small{color:var(--fg-muted)}
+.ig-stats{display:flex;gap:.9rem;padding:8px 12px;font-size:.62rem;color:var(--fg-muted)}
+.ig-stats b{display:block;font-size:.82rem;color:var(--fg);font-weight:700}
+.ig-grid{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:3px;padding:3px}
+.ig-cell{position:relative;overflow:hidden;background:var(--surface-2)}
+.ig-cell i{position:absolute;inset:0}
+.ig-bar{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border-top:1px solid var(--line);font-size:.62rem;color:var(--fg-muted)}
+.ig-bar .go{font-weight:700;color:var(--green)}
+:root[data-theme="dark"] .ig-bar .go,:root:not([data-theme="light"]) .ig-bar .go{color:var(--gold-soft)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ig-bar .go{color:var(--gold-soft)}}
+
+/* floating order card */
+.order-card{
+  position:absolute;right:-6px;bottom:38px;width:208px;z-index:4;
+  background:var(--surface);color:var(--fg);border-radius:16px;padding:12px 13px;
+  box-shadow:var(--shadow-lift);border:1px solid var(--line);
+  animation:float 6s ease-in-out infinite;animation-delay:-3s;
+}
+.order-card .row{display:flex;align-items:center;gap:.55rem}
+.order-card .wa{width:30px;height:30px;border-radius:9px;background:var(--whats);display:grid;place-items:center;flex:none}
+.order-card .t b{font-size:.82rem;display:block;line-height:1.1}
+.order-card .t small{font-size:.68rem;color:var(--fg-muted)}
+.order-card .amt{margin-top:9px;font-size:.72rem;color:var(--fg-muted);display:flex;justify-content:space-between;align-items:center}
+.order-card .amt b{color:var(--green);font-size:.92rem}
+:root[data-theme="dark"] .order-card .amt b{color:var(--gold-soft)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .order-card .amt b{color:var(--gold-soft)}}
+.badge-float{position:absolute;left:-10px;top:30px;z-index:4;background:var(--gold);color:var(--ink-on-gold);
+  font-weight:800;font-size:.72rem;padding:.5em .8em;border-radius:12px;box-shadow:var(--shadow);
+  transform:rotate(-6deg);animation:float 6s ease-in-out infinite;animation-delay:-1.5s;font-family:"Bricolage Grotesque"}
+
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@media(max-width:860px){.order-card{right:4%}.badge-float{left:4%}}
+
+/* =========================================================
+   LOGO/AS-SEEN STRIP
+   ========================================================= */
+.strip{background:var(--green-800);color:var(--on-green-soft);border-top:1px solid rgba(255,255,255,.07)}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:1rem 2.2rem;align-items:center;justify-content:center;padding-block:18px;font-size:.82rem;font-weight:600;letter-spacing:.02em}
+.strip b{color:var(--on-green)}
+.strip .sep{width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:.7}
+
+/* =========================================================
+   SECTION HEADS
+   ========================================================= */
+.sec-head{max-width:40ch;margin-bottom:clamp(30px,4vw,50px)}
+.sec-head.center{margin-inline:auto;text-align:center}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.9rem);letter-spacing:-.02em;margin:.5rem 0 0}
+.sec-head p{color:var(--fg-muted);font-size:1.08rem;margin-top:.8rem}
+.sec-head .eyebrow{color:var(--gold-deep)}
+:root[data-theme="dark"] .sec-head .eyebrow,:root:not([data-theme="light"]) .sec-head .eyebrow{color:var(--gold-soft)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sec-head .eyebrow{color:var(--gold-soft)}}
+
+/* =========================================================
+   PAIN BAND
+   ========================================================= */
+.pain{background:var(--surface-2)}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:8px}
+.pain-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 20px;box-shadow:var(--shadow-sm)}
+.pain-card .ic{width:44px;height:44px;border-radius:12px;background:rgba(227,169,58,.16);display:grid;place-items:center;margin-bottom:14px}
+.pain-card h3{font-size:1.1rem;margin-bottom:.35rem}
+.pain-card p{color:var(--fg-muted);font-size:.96rem}
+.pain-turn{margin-top:30px;text-align:center;font-family:"Bricolage Grotesque";font-weight:600;
+  font-size:clamp(1.15rem,2.4vw,1.7rem);line-height:1.25;color:var(--fg);max-width:24ch;margin-inline:auto}
+.pain-turn b{color:var(--gold-deep);background:linear-gradient(transparent 60%,rgba(227,169,58,.35) 60%)}
+:root[data-theme="dark"] .pain-turn b,:root:not([data-theme="light"]) .pain-turn b{color:var(--gold-soft)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pain-turn b{color:var(--gold-soft)}}
+
+/* =========================================================
+   WHAT YOU GET — outcomes
+   ========================================================= */
+.get{background:var(--bg)}
+.get-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.get-card{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);
+  border-radius:16px;padding:20px;box-shadow:var(--shadow-sm)}
+.get-card .tick{width:30px;height:30px;border-radius:50%;background:var(--green);display:grid;place-items:center;flex:none;margin-top:2px}
+.get-card h3{font-size:1.04rem;margin-bottom:.25rem}
+.get-card p{color:var(--fg-muted);font-size:.93rem}
+
+/* =========================================================
+   INSIDE — chapters
+   ========================================================= */
+.inside{background:var(--green-900);color:var(--on-green);position:relative;overflow:hidden}
+.inside::before{content:"";position:absolute;inset:auto 0 0 0;height:14px;
+  background:repeating-linear-gradient(90deg,var(--gold) 0 18px,transparent 18px 36px);
+  -webkit-mask:repeating-linear-gradient(90deg,#000 0 18px,transparent 18px 36px);opacity:.5}
+.inside .sec-head .eyebrow{color:var(--gold-soft)}
+.inside .sec-head p{color:var(--on-green-soft)}
+.inside-layout{display:grid;grid-template-columns:300px 1fr;gap:clamp(28px,4vw,54px);align-items:start}
+@media(max-width:860px){.inside-layout{grid-template-columns:1fr}}
+/* 3d book */
+.book{position:sticky;top:120px}
+@media(max-width:860px){.book{position:static;justify-self:center}}
+.book-3d{width:230px;aspect-ratio:1/1.38;position:relative;transform:rotateY(-18deg) rotateX(4deg);transform-style:preserve-3d;margin:10px auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.5))}
+.book-cover{position:absolute;inset:0;border-radius:4px 10px 10px 4px;overflow:hidden;
+  background:linear-gradient(160deg,#0f6151,#0a3e34 70%);border:1px solid rgba(255,255,255,.12);
+  display:flex;flex-direction:column;justify-content:space-between;padding:20px 18px}
+.book-cover::before{content:"";position:absolute;left:0;top:0;bottom:0;width:14px;
+  background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(255,255,255,.08) 60%,rgba(0,0,0,.15))}
+.book-spine{position:absolute;left:-13px;top:2px;bottom:2px;width:14px;transform:rotateY(90deg) translateX(-7px);
+  background:linear-gradient(#0a3e34,#06281f);border-radius:3px 0 0 3px}
+.bc-top{position:relative;z-index:1}
+.bc-kicker{font-size:.56rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-soft);font-weight:700}
+.bc-brand{font-family:"Bricolage Grotesque";font-weight:800;color:#fff;font-size:.78rem;margin-top:4px}
+.bc-mid{position:relative;z-index:1}
+.bc-mid h4{font-size:1.5rem;color:#fff;line-height:1;letter-spacing:-.01em}
+.bc-mid .rule{width:40px;height:3px;background:var(--gold);margin:10px 0;border-radius:2px}
+.bc-mid p{font-size:.64rem;color:var(--on-green-soft);line-height:1.4}
+.bc-bot{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;font-size:.54rem;color:var(--on-green-soft)}
+.bc-bot .pg{background:var(--gold);color:var(--ink-on-gold);font-weight:800;padding:.2em .5em;border-radius:5px;font-size:.56rem}
+.book-meta{text-align:center;margin-top:18px}
+.book-meta .pr{font-family:"Bricolage Grotesque";font-weight:700;font-size:1.3rem;color:#fff}
+.book-meta .pr s{color:var(--on-green-soft);font-weight:500;font-size:1rem;margin-right:.4em}
+.book-meta small{color:var(--on-green-soft);font-size:.76rem;display:block;margin-top:2px}
+
+.chapters{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(max-width:520px){.chapters{grid-template-columns:1fr}}
+.chap{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:14px 15px;transition:background .2s,border-color .2s}
+.chap:hover{background:rgba(255,255,255,.09);border-color:rgba(227,169,58,.5)}
+.chap .n{font-family:"Bricolage Grotesque";font-weight:800;font-size:.85rem;color:var(--gold-soft);
+  background:rgba(227,169,58,.14);width:30px;height:30px;border-radius:9px;display:grid;place-items:center;flex:none}
+.chap h4{font-size:.96rem;color:#fff;line-height:1.15}
+.chap p{font-size:.78rem;color:var(--on-green-soft);margin-top:2px}
+
+/* =========================================================
+   LOCAL / TANZANIA
+   ========================================================= */
+.local{background:var(--surface)}
+.local-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,54px);align-items:center}
+@media(max-width:820px){.local-layout{grid-template-columns:1fr;gap:30px}}
+.local h2{font-size:clamp(1.8rem,3.4vw,2.7rem);letter-spacing:-.02em}
+.local p.lead{color:var(--fg-muted);font-size:1.08rem;margin-top:.9rem;max-width:42ch}
+.local-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.lchip{display:inline-flex;align-items:center;gap:.5em;background:var(--surface-2);border:1px solid var(--line);
+  border-radius:12px;padding:.6em .85em;font-weight:600;font-size:.9rem}
+.lchip .e{font-size:1.05rem}
+.map-card{background:linear-gradient(160deg,var(--green),var(--green-900));border-radius:22px;padding:26px;color:var(--on-green);
+  box-shadow:var(--shadow);position:relative;overflow:hidden}
+.map-card::after{content:"";position:absolute;right:-30px;bottom:-30px;width:160px;height:160px;border-radius:50%;background:rgba(227,169,58,.14)}
+.map-card .eyebrow{color:var(--gold-soft)}
+.pay-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;position:relative;z-index:1}
+.pay{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:10px;
+  padding:.55em .8em;font-weight:700;font-size:.82rem;color:#fff}
+.map-card h3{font-size:1.3rem;color:#fff;margin-bottom:.3rem;position:relative;z-index:1}
+.map-card p{color:var(--on-green-soft);font-size:.95rem;position:relative;z-index:1}
+.deliver{margin-top:18px;display:flex;gap:16px;position:relative;z-index:1}
+.deliver .d{flex:1}
+.deliver .d b{display:block;font-family:"Bricolage Grotesque";font-size:1.4rem;color:var(--gold-soft)}
+.deliver .d small{font-size:.76rem;color:var(--on-green-soft)}
+
+/* =========================================================
+   PRICING
+   ========================================================= */
+.pricing{background:var(--bg)}
+.tiers{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px;margin:0 auto;align-items:stretch}
+@media(max-width:720px){.tiers{grid-template-columns:1fr;max-width:460px}}
+.tier{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px 26px;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);position:relative}
+.tier.featured{border:2px solid var(--gold);box-shadow:var(--shadow);background:var(--surface)}
+.tier.featured::before{content:"MOST POPULAR";position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:var(--gold);color:var(--ink-on-gold);font-family:"Bricolage Grotesque";font-weight:800;
+  font-size:.68rem;letter-spacing:.12em;padding:.4em .9em;border-radius:999px;white-space:nowrap}
+.tier .tname{font-family:"Bricolage Grotesque";font-weight:700;font-size:1.3rem}
+.tier .tdesc{color:var(--fg-muted);font-size:.92rem;margin-top:.25rem;min-height:2.4em}
+.tier .price{margin:16px 0 4px;font-family:"Bricolage Grotesque";font-weight:800;font-size:2.5rem;line-height:1;letter-spacing:-.02em}
+.tier .price small{font-size:.9rem;color:var(--fg-muted);font-weight:600;letter-spacing:0}
+.tier .price s{font-size:1.2rem;color:var(--fg-muted);font-weight:600;margin-right:.3em}
+.tier .punit{color:var(--fg-muted);font-size:.84rem;margin-bottom:18px}
+.tier ul{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:11px}
+.tier li{display:flex;gap:.6em;align-items:flex-start;font-size:.95rem}
+.tier li svg{flex:none;margin-top:3px}
+.tier li.off{color:var(--fg-muted)}
+.tier li.off svg{opacity:.4}
+.tier li b{font-weight:700}
+.tier .btn{width:100%;margin-top:auto}
+.guarantee{text-align:center;margin-top:26px;color:var(--fg-muted);font-size:.9rem;display:flex;align-items:center;justify-content:center;gap:.5em;flex-wrap:wrap}
+
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+.testi{background:var(--green-800);color:var(--on-green)}
+.testi .sec-head .eyebrow{color:var(--gold-soft)}
+.testi .sec-head p{color:var(--on-green-soft)}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.tcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:22px}
+.tcard .stars{font-size:.95rem;margin-bottom:10px}
+.tcard p{color:#eef4ea;font-size:1rem;line-height:1.55}
+.tcard .who{display:flex;align-items:center;gap:.7rem;margin-top:16px}
+.tcard .who .av{width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,var(--gold),var(--gold-deep));
+  display:grid;place-items:center;font-family:"Bricolage Grotesque";font-weight:800;color:var(--ink-on-gold);flex:none}
+.tcard .who b{font-size:.9rem;color:#fff;display:block;line-height:1.1}
+.tcard .who small{font-size:.76rem;color:var(--on-green-soft)}
+.sample-note{text-align:center;margin-top:22px;font-size:.8rem;color:var(--on-green-soft);font-style:italic}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+.faq{background:var(--surface)}
+.faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--surface-2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.faq-item summary{cursor:pointer;list-style:none;padding:18px 20px;font-weight:700;font-size:1.02rem;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary .pm{flex:none;width:22px;height:22px;border-radius:50%;background:var(--green);display:grid;place-items:center;transition:transform .2s}
+.faq-item[open] summary .pm{transform:rotate(45deg)}
+.faq-item .a{padding:0 20px 18px;color:var(--fg-muted);font-size:.97rem}
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+.final{background:radial-gradient(120% 120% at 80% 0%,#0f5347,var(--green-900) 60%,#05211b);color:var(--on-green);text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:auto 0 0 0;height:14px;
+  background:repeating-linear-gradient(90deg,var(--gold) 0 18px,transparent 18px 36px);
+  -webkit-mask:repeating-linear-gradient(90deg,#000 0 18px,transparent 18px 36px);opacity:.6}
+.final .eyebrow{color:var(--gold-soft)}
+.final h2{font-size:clamp(2rem,4.4vw,3.2rem);letter-spacing:-.02em;margin:.6rem auto .4rem;max-width:18ch}
+.final p{color:var(--on-green-soft);font-size:1.1rem;max-width:34ch;margin:0 auto 1.8rem}
+.final .ctas{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap}
+.secure-note{display:inline-flex;align-items:center;gap:.6rem;margin-top:26px;background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:.6rem 1.2rem;
+  color:var(--on-green-soft);font-size:.84rem;font-weight:600;text-align:left;line-height:1.3}
+.secure-note svg{flex:none}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer{background:#05211b;color:var(--on-green-soft)}
+footer .wrap{padding-block:34px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer .brand small{color:var(--gold-soft)}
+footer .fnav{display:flex;gap:1.3rem;flex-wrap:wrap;font-size:.85rem;font-weight:600}
+footer .fnav a{color:var(--on-green-soft);text-decoration:none}
+footer .fnav a:hover{color:var(--gold-soft)}
+footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:16px;font-size:.78rem;color:var(--on-green-soft);display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+</style>
+</head>
+<body>
+<!-- ============================= HEADER ============================= -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Furaha Ebooks home">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="11" fill="#0e5a4e" stroke="#e3a93a" stroke-width="2"/>
+        <path d="M13 28V12h14M13 20h10" stroke="#f3cd7e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="29" cy="28" r="3" fill="#e3a93a"/>
+      </svg>
+      <span><b>Furaha Ebooks</b><small>Digital Guides</small></span>
+    </a>
+    <div class="nav-cta">
+      <span class="nav-price">From <b>TZS 8,500</b></span>
+      <a class="btn btn-gold" href="#pricing">Get the Guide</a>
+    </div>
+  </div>
+</header>
+
+<span id="top"></span>
+
+<!-- ============================= HERO ============================= -->
+<section class="band hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="dot"></span>Furaha Ebooks · 2026 Edition</span>
+      <h1>Start your Instagram business — <span class="hl">without quitting your job.</span></h1>
+      <p class="sub">The step-by-step guide that turns the side-hustle you keep dreaming about into real orders landing in your WhatsApp — built for employed women in Tanzania.</p>
+      <div class="ctas">
+        <a class="btn btn-gold btn-lg" href="#pricing">Get the guide today</a>
+        <a class="btn btn-ghost btn-lg" href="#inside">See what's inside</a>
+      </div>
+      <div class="trust">
+        <span class="chip"><span class="stars">★★★★★</span> Loved by first-time sellers</span>
+        <span class="chip">🇹🇿 Made for Tanzania</span>
+        <span class="chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="#f3cd7e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Instant PDF download
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="phone" role="img" aria-label="Phone showing a growing Instagram business profile">
+        <div class="screen">
+          <div class="ig-top">
+            <span class="av"><span></span></span>
+            <div class="h"><b>@your.brand.tz</b><small>Small business · Dar es Salaam</small></div>
+          </div>
+          <div class="ig-stats">
+            <span><b>128</b>posts</span><span><b>4,210</b>followers</span><span><b>village</b>vibes</span>
+          </div>
+          <div class="ig-grid">
+            <div class="ig-cell"><i style="background:linear-gradient(135deg,#e3a93a,#b9821f)"></i></div>
+            <div class="ig-cell"><i style="background:linear-gradient(135deg,#0e5a4e,#0a3e34)"></i></div>
+            <div class="ig-cell"><i style="background:linear-gradient(135deg,#d98a3a,#7c3aed)"></i></div>
+            <div class="ig-cell"><i style="background:linear-gradient(135deg,#2bd36b,#0e5a4e)"></i></div>
+            <div class="ig-cell"><i style="background:linear-gradient(135deg,#f3cd7e,#e3a93a)"></i></div>
+            <div class="ig-cell"><i style="background:linear-gradient(135deg,#0a3e34,#12332c)"></i></div>
+          </div>
+          <div class="ig-bar"><span>Grow it in 30 days</span><span class="go">Open guide →</span></div>
+        </div>
+      </div>
+      <div class="badge-float">+3,000<br>followers</div>
+      <div class="order-card">
+        <div class="row">
+          <span class="wa"><svg width="17" height="17" viewBox="0 0 24 24" fill="#06321a"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.5A10 10 0 1012 2zm0 2a8 8 0 11-4.2 14.8l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 0112 4z"/><path d="M8.5 7.8c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4 0 .5l-.4.5c-.1.2-.3.3-.1.6a6 6 0 002.8 2.5c.3.1.5.1.6-.1l.5-.6c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.4 0 .5-.3 1.2-.9 1.4-.6.2-1.8.3-3.8-.9a8 8 0 01-3-3.3c-.4-.9-.5-1.7-.5-2.2 0-.6.3-1 .4-1z"/></svg></span>
+          <div class="t"><b>New order!</b><small>via WhatsApp · just now</small></div>
+        </div>
+        <div class="amt"><span>Payment confirmed</span><b>TZS 45,000</b></div>
+      </div>
+    </div>
+  </div>
+  <div class="kanga" aria-hidden="true"></div>
+</section>
+
+<!-- ============================= STRIP ============================= -->
+<div class="band strip">
+  <div class="wrap">
+    <span><b>25</b> practical pages</span><span class="sep"></span>
+    <span><b>10</b> chapters</span><span class="sep"></span>
+    <span><b>30-day</b> launch plan</span><span class="sep"></span>
+    <span>Real <b>Tanzanian</b> examples</span><span class="sep"></span>
+    <span>Pay by <b>M-Pesa</b> or card</span>
+  </div>
+</div>
+
+<!-- ============================= PAIN ============================= -->
+<section class="band pain band-pad">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow"><span class="dot"></span>Sound familiar?</span>
+      <h2>You've wanted to start for months. Something keeps stopping you.</h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="ic">⏰</div>
+        <h3>"I have no time."</h3>
+        <p>Between the job, the commute and home, the business always gets pushed to "next month."</p>
+      </div>
+      <div class="pain-card">
+        <div class="ic">🤷🏾‍♀️</div>
+        <h3>"I don't know where to start."</h3>
+        <p>What do I sell? How do I set up the page? How do people even find me? It feels like too much.</p>
+      </div>
+      <div class="pain-card">
+        <div class="ic">😰</div>
+        <h3>"What will people say?"</h3>
+        <p>The fear of posting, of looking like you're "trying too hard," of starting and no one buying.</p>
+      </div>
+      <div class="pain-card">
+        <div class="ic">💸</div>
+        <h3>"My salary isn't enough."</h3>
+        <p>You want a second income you own — but every course feels made for someone in another country.</p>
+      </div>
+    </div>
+    <p class="pain-turn">This guide was written for exactly you — the employed woman ready to <b>finally start</b>, around the job you already have.</p>
+  </div>
+</section>
+
+<!-- ============================= WHAT YOU GET ============================= -->
+<section class="band get band-pad">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span>By the last page</span>
+      <h2>You'll stop planning and start selling.</h2>
+      <p>No fluff and no theory you can't use. Every chapter ends with a "Do this now" step, so you build a real business as you read.</p>
+    </div>
+    <div class="get-grid">
+      <div class="get-card"><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#eef4ea" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Pick a product that sells</h3><p>A simple way to choose what to sell — using what's already around you in Tanzania.</p></div></div>
+      <div class="get-card"><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#eef4ea" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>A profile people trust</h3><p>Set up a page that looks like a real business, so strangers feel safe to buy.</p></div></div>
+      <div class="get-card"><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#eef4ea" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Grow followers for free</h3><p>Get your first real followers without spending a shilling on ads.</p></div></div>
+      <div class="get-card"><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#eef4ea" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Turn comments into orders</h3><p>The exact words to move someone from "Bei?" to a confirmed WhatsApp sale.</p></div></div>
+      <div class="get-card"><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#eef4ea" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Run it around your job</h3><p>A content-batching routine that fits into evenings and weekends.</p></div></div>
+      <div class="get-card"><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#eef4ea" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>A 30-day launch plan</h3><p>Day by day, exactly what to do — so you actually begin instead of "someday."</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= INSIDE / CHAPTERS ============================= -->
+<section class="band inside band-pad" id="inside">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow"><span class="dot"></span>Inside the guide</span>
+      <h2>25 pages. 10 chapters. One clear path.</h2>
+      <p>From the first spark of an idea to your first paid order — in the order you actually need it.</p>
+    </div>
+    <div class="inside-layout">
+      <div class="book">
+        <div class="book-3d">
+          <div class="book-spine"></div>
+          <div class="book-cover">
+            <div class="bc-top">
+              <div class="bc-kicker">Furaha Ebooks</div>
+              <div class="bc-brand">Digital Guide</div>
+            </div>
+            <div class="bc-mid">
+              <h4>The Instagram Business Starter</h4>
+              <div class="rule"></div>
+              <p>Start &amp; run a profitable Instagram business — while you keep your job.</p>
+            </div>
+            <div class="bc-bot"><span>2026 Edition</span><span class="pg">25 pages</span></div>
+          </div>
+        </div>
+        <div class="book-meta">
+          <div class="pr">TZS 8,500</div>
+          <small>Instant download · yours forever</small>
+        </div>
+      </div>
+
+      <div class="chapters">
+        <div class="chap"><span class="n">1</span><div><h4>The side-hustle mindset</h4><p>Think like an owner, around a 9-to-5.</p></div></div>
+        <div class="chap"><span class="n">2</span><div><h4>Choosing your product</h4><p>What to sell &amp; how to test it cheaply.</p></div></div>
+        <div class="chap"><span class="n">3</span><div><h4>Your business profile</h4><p>A page people trust at first glance.</p></div></div>
+        <div class="chap"><span class="n">4</span><div><h4>Content that sells</h4><p>Batch a week of posts in one evening.</p></div></div>
+        <div class="chap"><span class="n">5</span><div><h4>Growing for free</h4><p>Your first followers, no ad spend.</p></div></div>
+        <div class="chap"><span class="n">6</span><div><h4>Closing on WhatsApp</h4><p>Reply scripts that turn chats to cash.</p></div></div>
+        <div class="chap"><span class="n">7</span><div><h4>Orders &amp; delivery</h4><p>Track orders, boda &amp; bus delivery.</p></div></div>
+        <div class="chap"><span class="n">8</span><div><h4>Your first paid ad</h4><p>Boost a post without wasting money.</p></div></div>
+        <div class="chap"><span class="n">9</span><div><h4>Beating the fear</h4><p>Post, sell &amp; keep going with confidence.</p></div></div>
+        <div class="chap"><span class="n">10</span><div><h4>Your 30-day plan</h4><p>A day-by-day map to launch.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= LOCAL ============================= -->
+<section class="band local band-pad">
+  <div class="wrap">
+    <div class="local-layout">
+      <div>
+        <span class="eyebrow" style="color:var(--gold-deep)"><span class="dot"></span>Built for here</span>
+        <h2>Finally — a guide that speaks Tanzania.</h2>
+        <p class="lead">Not a translated foreign course. Real examples from Kariakoo to Mwanza, prices in shillings, and the way business actually works here.</p>
+        <div class="local-chips">
+          <span class="lchip"><span class="e">🛍️</span> Kariakoo sourcing</span>
+          <span class="lchip"><span class="e">📱</span> Mobile-money payments</span>
+          <span class="lchip"><span class="e">🏍️</span> Boda &amp; bus delivery</span>
+          <span class="lchip"><span class="e">💬</span> Kiswahili sales phrases</span>
+          <span class="lchip"><span class="e">🏙️</span> Dar · Mwanza · Dodoma</span>
+        </div>
+      </div>
+      <div class="map-card">
+        <span class="eyebrow"><span class="dot"></span>Get paid your way</span>
+        <h3 style="margin-top:.6rem">Payments that work in Tanzania</h3>
+        <p>Your customers pay the way they already know — and the money reaches you.</p>
+        <div class="pay-row">
+          <span class="pay">M-Pesa</span><span class="pay">Tigo Pesa</span><span class="pay">Airtel Money</span><span class="pay">Halopesa</span><span class="pay">Card</span>
+        </div>
+        <div class="deliver">
+          <div class="d"><b>Automatic</b><small>Secure checkout verifies every payment for you</small></div>
+          <div class="d"><b>Instant</b><small>The download unlocks the moment it clears</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= PRICING ============================= -->
+<section class="band pricing band-pad" id="pricing">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow"><span class="dot"></span>Choose your version</span>
+      <h2>Pick where you want to start.</h2>
+      <p style="margin-inline:auto">Both are the complete guide. Premium adds the tools and templates that help you move faster.</p>
+    </div>
+    <div class="tiers">
+      <!-- STANDARD -->
+      <div class="tier">
+        <div class="tname">Standard</div>
+        <div class="tdesc">The full 25-page guide — everything you need to start.</div>
+        <div class="price">TZS 8,500</div>
+        <div class="punit">one-time · instant download</div>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#0e5a4e"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> The complete <b>25-page</b> guide (PDF)</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#0e5a4e"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> All <b>10 chapters</b> + "Do this now" steps</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#0e5a4e"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> The <b>30-day launch plan</b></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#0e5a4e"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Tanzanian examples throughout</li>
+          <li class="off"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#9aa"/><path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg> WhatsApp sales-script pack</li>
+          <li class="off"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#9aa"/><path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg> Caption &amp; content templates</li>
+        </ul>
+        <a class="btn btn-green btn-lg" href="https://your-checkout-link.com/standard" target="_blank" rel="noopener">Buy &amp; download now</a>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="tier featured">
+        <div class="tname">Premium</div>
+        <div class="tdesc">The guide plus the templates &amp; scripts that save you weeks.</div>
+        <div class="price">TZS 20,500</div>
+        <div class="punit">one-time · instant download bundle</div>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#e3a93a"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#3a2a06" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <b>Everything in Standard</b></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#e3a93a"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#3a2a06" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <b>WhatsApp sales scripts</b> — copy-paste replies</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#e3a93a"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#3a2a06" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <b>30+ caption templates</b> to fill in</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#e3a93a"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#3a2a06" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <b>Profile-setup checklist</b> (printable)</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#e3a93a"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#3a2a06" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <b>First-ad walkthrough</b> with sample budget</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#e3a93a"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#3a2a06" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <b>Free lifetime updates</b> to the guide</li>
+        </ul>
+        <a class="btn btn-gold btn-lg" href="https://your-checkout-link.com/premium" target="_blank" rel="noopener">Buy &amp; download now</a>
+      </div>
+    </div>
+    <p class="guarantee">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.4 8.5-8 11-4.6-2.5-8-6-8-11V5l8-3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12l2.2 2.2L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Secure payment · Instant download · Yours to keep forever
+    </p>
+  </div>
+</section>
+
+<!-- ============================= TESTIMONIALS ============================= -->
+<section class="band testi band-pad">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow"><span class="dot"></span>Early readers</span>
+      <h2>Women who stopped waiting.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="tcard">
+        <div class="stars" style="color:var(--gold)">★★★★★</div>
+        <p>"I'd been 'planning' for a year. I read this in two evenings and posted my first product the same week. I've had 6 orders already."</p>
+        <div class="who"><span class="av">A</span><div><b>Amina</b><small>Teacher · Dar es Salaam</small></div></div>
+      </div>
+      <div class="tcard">
+        <div class="stars" style="color:var(--gold)">★★★★★</div>
+        <p>"The WhatsApp reply scripts alone were worth it. I used to lose buyers at 'Bei?'. Now I know exactly what to say."</p>
+        <div class="who"><span class="av">N</span><div><b>Neema</b><small>Bank officer · Mwanza</small></div></div>
+      </div>
+      <div class="tcard">
+        <div class="stars" style="color:var(--gold)">★★★★★</div>
+        <p>"Finally something written for us. Real shilling prices, real delivery, no confusing foreign advice. I felt it was made for me."</p>
+        <div class="who"><span class="av">J</span><div><b>Joyce</b><small>Nurse · Dodoma</small></div></div>
+      </div>
+    </div>
+    <p class="sample-note">Sample testimonials shown as placeholders — swap in your real buyer reviews before you run ads.</p>
+  </div>
+</section>
+
+<!-- ============================= FAQ ============================= -->
+<section class="band faq band-pad">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow"><span class="dot"></span>Questions</span>
+      <h2>Before you buy</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Do I need to quit my job to do this? <span class="pm"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg></span></summary>
+        <div class="a">No. The whole guide is built around keeping your job. The routines fit into evenings and weekends, and the 30-day plan assumes you're working full-time.</div>
+      </details>
+      <details class="faq-item">
+        <summary>I'm not "techy." Is this too complicated? <span class="pm"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg></span></summary>
+        <div class="a">If you can use WhatsApp and Instagram, you can do everything in this guide. Each step is explained simply, with a clear "Do this now" action so you're never guessing.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How do I pay, and how do I get the guide? <span class="pm"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg></span></summary>
+        <div class="a">Click <b>Buy &amp; download now</b> and you'll go to our secure online checkout. Pay by mobile money (M-Pesa, Tigo Pesa, Airtel Money, Halopesa) or card — the gateway verifies your payment automatically, and the moment it clears, your download unlocks instantly. There's no waiting and no need to message anyone.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What's the difference between Standard and Premium? <span class="pm"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg></span></summary>
+        <div class="a">Standard is the complete 25-page guide. Premium adds the ready-to-use tools — WhatsApp sales scripts, caption templates, a profile checklist, a first-ad walkthrough, and free lifetime updates — so you move faster without building everything yourself.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Will this work for my kind of product? <span class="pm"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg></span></summary>
+        <div class="a">Yes. Whether you sell clothes, food, beauty products, crafts or services, the method is the same — choose a product, build trust, grow followers, and close on WhatsApp. The examples are drawn from businesses just like yours.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FINAL CTA ============================= -->
+<section class="band final band-pad">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>Your move</span>
+    <h2>The best time to start was last year. The second best is tonight.</h2>
+    <p>Stop dreaming about it. Get the guide, follow the 30-day plan, and have your Instagram business live this month.</p>
+    <div class="ctas">
+      <a class="btn btn-gold btn-lg" href="#pricing">Get the guide — from TZS 8,500</a>
+      <a class="btn btn-ghost btn-lg" href="#inside">See what's inside</a>
+    </div>
+    <div class="secure-note">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V7.5a5 5 0 0110 0V10" stroke="#f3cd7e" stroke-width="2" stroke-linecap="round"/><rect x="4.5" y="10" width="15" height="9.5" rx="2.5" fill="none" stroke="#f3cd7e" stroke-width="2"/></svg>
+      <span>Secure online checkout · mobile money or card · payment verified automatically · instant download</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="band">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="11" fill="#0e5a4e" stroke="#e3a93a" stroke-width="2"/>
+        <path d="M13 28V12h14M13 20h10" stroke="#f3cd7e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="29" cy="28" r="3" fill="#e3a93a"/>
+      </svg>
+      <span><b style="color:#fff">Furaha Ebooks</b><small>Digital Guides</small></span>
+    </a>
+    <nav class="fnav">
+      <a href="#inside">What's inside</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#pricing">Buy now</a>
+    </nav>
+    <div class="copy">
+      <span>© 2026 Furaha Ebooks · The Instagram Business Starter</span>
+      <span>For your personal use. Please don't redistribute — share us instead. Asante 💛</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
